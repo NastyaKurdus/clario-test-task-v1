@@ -22,7 +22,7 @@ const passwordOptions = {
     number: strHasNumber,
   },
 };
-const requirements = [
+const passwordRequirements = [
   { types: ["required"], message: "Field is required.", unpin: true },
   {
     types: ["minLength", "maxLength", "noSpace"],
@@ -65,7 +65,7 @@ export const PasswordInput: FC = () => {
           onMouseDown={handleSkipBlur}
         />
       </div>
-      <Requirements fieldName={passwordFieldName} list={requirements} />
+      <Requirements fieldName={passwordFieldName} list={passwordRequirements} />
     </div>
   );
 };
